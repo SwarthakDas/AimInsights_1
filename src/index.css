@@ -6,8 +6,76 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+*{
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Ensure the main container takes full height and centers content */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+/* Modal Styles */
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  background: #FFF;
+  padding: 20px;
+  border-radius: 10px;
+  outline: none;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Button Styles */
+button {
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4A5568;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Remove default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
